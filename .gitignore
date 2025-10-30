@@ -2,7 +2,6 @@
 *.project
 *.settings/
 /.settings/
-/.server/
 /bin/
 build/
 
