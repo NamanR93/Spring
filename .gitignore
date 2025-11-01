@@ -3,7 +3,6 @@
 *.settings/
 /.settings/
 /bin/
-build/
 /test/
 /target/
 
