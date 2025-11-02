@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p=" http://www.springframework.org/schema/p"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+
+<!-- by Name of Bean -->
+	<bean class="com.sp.bean.Address" name="Address">
+
+		<property name="street" value="CP" />
+		<property name="city" value="Delhi" />
+
+	</bean>
+	
+	<!-- In this it will check(match) the name of the bean and its object in another class -->
+	<bean class="com.sp.bean.Employee" name="emp1" autowire="byName" /> 
+	
+	
+	<!-- by type -->
+	<bean class="com.sp.bean.Address" name="Add1">
+
+		<property name="street" value="CP" />
+		<property name="city" value="Delhi" />
+
+	</bean>
+	
+	<!-- In this it will check(match) the type of the bean and its object in another class -->
+	<bean class="com.sp.bean.Employee" name="emp1" autowire="byType" /> 
+	
+	
+	<!-- by Constructor -->
+
+</beans>
