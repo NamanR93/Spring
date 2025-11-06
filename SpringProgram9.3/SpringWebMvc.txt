@@ -1,0 +1,48 @@
+Steps how to create Spring First Web-MVC Program:
+		
+1. create maven project
+2. provide  "spring web-mvc" dependency in pom.xml file
+
+
+3. configure "Dispatcher Servlet" class in web.xml file or in java class
+4. create the "Spring configuration file" (myds-servlet.xml) in webINF folder.
+
+
+5.configure the handler mapping class in above .xml file
+          == HandlerMapping <interface>
+          == BeanNameUrlHandlerMapping
+          == RequestMappingHandlerMapping (default)
+          
+6. create Controller (create java class and annotate it with @controller) in src/main/java folder.
+
+7.create handler methods in the controller and return the ModelandView object
+
+8.configure ViewResolver in spring configuration file
+          ==ViewResolver <interface>
+          == InternalResourceViewResolver (default)
+
+9. Create view page to be returned (/web-INF/Views/-----.jsp)
+10. Scan the package( in which controllers are created) in spring configuration file)
+
+
+
+--------------Sending data from Controller to view: 9.1-------------------
+
+Model                                                         ModelAnd View
+
+addAttribute(String key, Object value)                       addObject(String key,Object value)
+
+
+NOTE:
+-- to get data use <% %> tag
+-- to print it in page use <%= %> 
+
+<%@ page isELIgnored="false"%> write this line at the top of JSP page, then use ${} to print.
+
+Now for traversing in the loop use use JSTL
+
+
+-----------sending data view to controller-------------
+
+
+     
