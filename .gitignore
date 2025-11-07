@@ -3,6 +3,8 @@
 *.settings/
 /.settings/
 /bin/
+
+
 /test/
 /target/
 
